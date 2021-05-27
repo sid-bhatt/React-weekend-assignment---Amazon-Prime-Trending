@@ -1,18 +1,17 @@
 import React, { Component, useState } from "react";
 import "../styles/App.css";
-import slides from "../data";
 
 const App = (props) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const prev = () => {
-    if (currentSlide !== 0) {
+    if (currentSlide > 0) {
       setCurrentSlide(currentSlide - 1);
     } else setCurrentSlide(0);
   };
 
   const next = () => {
-    currentSlide < props.slides.length && setCurrentSlide(currentSlide + 1);
+    currentSlide < props.slides.length - 1 && setCurrentSlide(currentSlide + 1);
   };
 
   const restart = () => {
