@@ -34,7 +34,7 @@ const App = (props) => {
         </button>
         <button
           data-testid="button-restart"
-          disabled={currentSlide === props.slides.length - 1 ? true : false}
+          disabled={currentSlide === props.slides.length-1 ? true : false}
           onClick={restart}
         >
           Restart
